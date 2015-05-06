@@ -50,6 +50,15 @@ function format_jump_link($link)
   return $link;
 }
 
+function bg_image($img){
+  $bg_img = "";
+  if(isset($img)){
+    $bg_img = $img['url'];
+  }
+
+  return $bg_img;
+}
+
 
 
 

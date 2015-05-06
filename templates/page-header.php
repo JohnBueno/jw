@@ -1,5 +1,5 @@
 <?php use Roots\Sage\Titles; ?>
-<div class="container">
+<div class="container page-head">
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="page-header">
