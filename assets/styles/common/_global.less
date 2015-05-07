@@ -14,14 +14,29 @@
 }
 
 .img-bg {
-    //background-image: url(http://placekitten.com/1500/900);
     background-color: #000;
     background-position: center center;
     background-size: cover;
-    min-height: 300px;
     padding-top: 100px;
     padding-bottom: 100px;
     color: #fff;
+    height: 100%;
+
+}
+
+.img-bg-left{
+	position: absolute;
+	&:extend(.img-bg);
+	left: 0%;
+}
+.img-bg-right{
+	position: absolute;
+	&:extend(.img-bg);
+	left: 50%;
+}
+
+.relative{
+	position: relative;
 }
 
 .jump-nav {
@@ -32,6 +47,7 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
+	z-index: 100;
 }
 
 .pad{

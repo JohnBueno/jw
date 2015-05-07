@@ -14,6 +14,13 @@
  * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
+function scrollToAnchor(aid) {
+    var aTag = $("#" + aid);
+    $('html,body').animate({
+        scrollTop: aTag.offset().top - $(".jump-nav").height()
+    }, 'fast');
+}
+
 (function($) {
 
     // Use this variable to set up the common and page specific functions. If you
@@ -28,7 +35,7 @@
                 var header = $("header");
 
                 var fixedHeight = header.height() + pageHead.height();
-                
+
                 $(window).scroll(function() {
                     if ($(this).scrollTop() > fixedHeight) {
                         jumpNav.addClass("fixed");
@@ -38,6 +45,18 @@
                         pageHead.removeClass("jump-pad");
                     }
                 });
+
+                $(".jump-nav a").on("click", function(e) {
+                    e.preventDefault();
+                    scrollToAnchor($(this).attr('name'));
+                });
+
+                // $('.isotope').isotope({
+                //     itemSelector: '.item',
+                //     masonry: {
+                //         columnWidth: 100
+                //     }
+                // });
 
             },
             finalize: function() {

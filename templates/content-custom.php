@@ -10,7 +10,7 @@
             <ul id="menu-main-1" class="nav navbar-nav">
                 <?php foreach ($modules as $module): ?>
                 	<li class="menu-about">
-                		<a href="<?php echo get_permalink( $post->ID ); ?>#<?php echo Extras\format_jump_link($module['title']); ?>">
+                		<a name="<?php echo Extras\format_jump_link($module['title']); ?>" href="<?php echo get_permalink( $post->ID ); ?>#<?php echo Extras\format_jump_link($module['title']); ?>">
                 			<?php echo $module['title'] ?>
                 		</a>
 
@@ -30,8 +30,8 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
-				<h4><?php the_content(); ?></h4> 
+			<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+				<?php the_content(); ?>
 			</div>
 		</div>
 	</div>
