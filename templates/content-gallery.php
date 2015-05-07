@@ -12,21 +12,23 @@
     </div>
 </div>
 
-
-<div class="row isotope">
+<div class="container">
+	<div class="row isotope">
 		
 	<?php if ($images = get_field("gallery")): ?>
 		<?php foreach ($images as $image): ?>
 		
-		<a class="item" href="<?php echo($image['url']); ?>">
-			<img src="<?php echo($image['sizes']['medium']); ?>" alt="<?php echo($image['alt']); ?>">
+		<a class="item col-xs-3" href="<?php echo($image['url']); ?>">
+			<img class="img-responsive" src="<?php echo($image['sizes']['medium']); ?>" alt="<?php echo($image['alt']); ?>">
 		</a>
 		
 
 		<?php endforeach; ?>
 	<?php endif; ?>
 	
+	</div>
 </div>
+
 
 
 

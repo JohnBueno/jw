@@ -9,9 +9,14 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "jquery": "1.11.2",
-    "bootstrap": "3.3.4"
+    "bootstrap": "3.3.4",
+    "isotope": "~2.2.0",
+    "imagesloaded": "~3.1.8"
   },
   "overrides": {
+    "isotope": {
+      "main": "./dist/isotope.pkgd.js"
+    },
     "modernizr": {
       "main": "./modernizr.js"
     },
@@ -25,10 +30,7 @@
         "./js/collapse.js",
         "./js/dropdown.js",
         "./js/modal.js",
-        "./js/tooltip.js",
-        "./js/popover.js",
         "./js/scrollspy.js",
-        "./js/tab.js",
         "./js/affix.js",
         "./fonts/glyphicons-halflings-regular.eot",
         "./fonts/glyphicons-halflings-regular.svg",

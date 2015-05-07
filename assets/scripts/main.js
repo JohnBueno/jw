@@ -51,12 +51,24 @@ function scrollToAnchor(aid) {
                     scrollToAnchor($(this).attr('name'));
                 });
 
-                // $('.isotope').isotope({
-                //     itemSelector: '.item',
-                //     masonry: {
-                //         columnWidth: 100
-                //     }
-                // });
+                $('.isotope').isotope({
+                    masonry: {
+                        columnWidth: '.col-xs-3'
+                    },
+                    itemSelector: '.item',
+                    percentPosition: true
+                });
+
+                imagesLoaded('.isotope', function() {
+
+                    $('.isotope .item').each(function(i) {
+                        console.log("test");
+                        $(this).delay(i * 300).queue(function() {
+                            $(this).addClass("loaded").dequeue();
+                        });
+                    });
+
+                });
 
             },
             finalize: function() {
