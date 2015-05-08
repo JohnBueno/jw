@@ -1,13 +1,14 @@
-<?php use Roots\Sage\Extras as Extras; ?>
+<?php 
+	use Roots\Sage\Extras as Extras; 
+	use Roots\Sage\Nav\NavWalker;
+?>
 
-<div class="row banner navbar navbar-default jump-nav" role="banner">
+<div class="row banner navbar navbar-default" role="banner">
     <div class="container">
         <nav role="navigation">
-            <ul id="menu-main-1" class="nav navbar-nav">
-                	<li class="menu-about">
-                		<a name="" href=""></a>
-                	</li>
-            </ul>
+            <?php
+		    	wp_nav_menu(['menu' => 'portfolios', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav']);
+		    ?>
         </nav>
     </div>
 </div>
@@ -18,7 +19,7 @@
 	<?php if ($images = get_field("gallery")): ?>
 		<?php foreach ($images as $image): ?>
 		
-		<a class="item col-xs-3" href="<?php echo($image['url']); ?>">
+		<a class="item" data-lightbox="img-lightbox" data-title="<?php echo($image['caption']); ?>" href="<?php echo($image['url']); ?>">
 			<img class="img-responsive" src="<?php echo($image['sizes']['medium']); ?>" alt="<?php echo($image['alt']); ?>">
 		</a>
 		

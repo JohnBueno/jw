@@ -53,7 +53,7 @@ function scrollToAnchor(aid) {
 
                 $('.isotope').isotope({
                     masonry: {
-                        columnWidth: '.col-xs-3'
+                        columnWidth: '.item'
                     },
                     itemSelector: '.item',
                     percentPosition: true
@@ -62,7 +62,6 @@ function scrollToAnchor(aid) {
                 imagesLoaded('.isotope', function() {
 
                     $('.isotope .item').each(function(i) {
-                        console.log("test");
                         $(this).delay(i * 300).queue(function() {
                             $(this).addClass("loaded").dequeue();
                         });
