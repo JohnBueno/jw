@@ -78,10 +78,12 @@ function scrollToAnchor(aid) {
         'home': {
             init: function() {
                 // JavaScript to be fired on the home page
-                console.log('test');
-                cbpBGSlideshow.init({
-                    delay: 5200
+                imagesLoaded('#full-bg', function() {
+                    $fullBg = $("#full-bg");
+                    $fullBg.css('background-image', 'url(' + $fullBg.find('img').attr('src') + ')');
+                    $fullBg.addClass('loaded');
                 });
+
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS

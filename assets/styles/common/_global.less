@@ -1,4 +1,3 @@
-
 .page-head.jump-pad {
     margin-bottom: 50px;
 }
@@ -51,7 +50,7 @@
     padding-right: @grid-gutter-width/2;
 }
 
-.mask{
+.mask {
     top: 0;
     left: 0;
     position: absolute;
@@ -60,28 +59,72 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
-.isotope{
+.isotope {
     .transition(opacity 2.0s ease);
     .opacity(0);
 }
 
-.isotope.loaded{
+.isotope.loaded {
     .opacity(1);
 }
 
-.isotope .item img{
-	width: 100%;
+.isotope .item img {
+    width: 100%;
 }
+
 .isotope .item {
     padding: 0;
     .transition(opacity 2.0s ease);
     .opacity(0);
 }
 
-.isotope .item.loaded{
-	.opacity(1);
+.isotope .item.loaded {
+    .opacity(1);
 }
-.footer{
+
+.home {
+    min-height: 400px;
+}
+
+.full-bg-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+}
+
+.full-bg {
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    .opacity(0);
+    .transition(opacity 2.0s ease);
+    &.loaded {
+        .opacity(1);
+    }
+    img {
+        display: none;
+    }
+}
+
+
+.home .footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footer {
     margin-top: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
