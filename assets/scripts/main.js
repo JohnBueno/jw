@@ -60,7 +60,7 @@ function scrollToAnchor(aid) {
                 });
 
                 imagesLoaded('.isotope', function() {
-
+                    $('.isotope').addClass('loaded');
                     $('.isotope .item').each(function(i) {
                         $(this).delay(i * 300).queue(function() {
                             $(this).addClass("loaded").dequeue();
@@ -78,6 +78,10 @@ function scrollToAnchor(aid) {
         'home': {
             init: function() {
                 // JavaScript to be fired on the home page
+                console.log('test');
+                cbpBGSlideshow.init({
+                    delay: 5200
+                });
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS

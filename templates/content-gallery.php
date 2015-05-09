@@ -19,7 +19,7 @@
 	<?php if ($images = get_field("gallery")): ?>
 		<?php foreach ($images as $image): ?>
 		
-		<a class="item" data-lightbox="img-lightbox" data-title="<?php echo($image['caption']); ?>" href="<?php echo($image['url']); ?>">
+		<a class="item col-sm-4 col-xs-6" data-lightbox="img-lightbox" data-title="<?php echo($image['caption']); ?>" href="<?php echo($image['url']); ?>">
 			<img class="img-responsive" src="<?php echo($image['sizes']['medium']); ?>" alt="<?php echo($image['alt']); ?>">
 		</a>
 		

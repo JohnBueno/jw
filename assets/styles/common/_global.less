@@ -1,3 +1,4 @@
+
 .page-head.jump-pad {
     margin-bottom: 50px;
 }
@@ -6,10 +7,6 @@
     margin-top: 0;
     margin-bottom: 0;
     border-bottom: none;
-}
-
-.module {
-    //margin-top: 50px;
 }
 
 .img-bg {
@@ -54,16 +51,39 @@
     padding-right: @grid-gutter-width/2;
 }
 
+.mask{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.isotope{
+    .transition(opacity 2.0s ease);
+    .opacity(0);
+}
+
+.isotope.loaded{
+    .opacity(1);
+}
+
 .isotope .item img{
 	width: 100%;
 }
 .isotope .item {
     padding: 0;
-    width: 25%;
     .transition(opacity 2.0s ease);
     .opacity(0);
 }
 
 .isotope .item.loaded{
 	.opacity(1);
+}
+.footer{
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: @gray;
 }

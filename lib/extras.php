@@ -32,14 +32,21 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-function format_module($title, $format, $body, $img){
+function format_module($module){
+
+  $title = $module['title']; 
+  $format = $module['module_type'];
+  $body = $module['body'];
+  $img = $module['image']['url'];
+
+
   $template_name = urlencode($format);
   $path = 'modules/'.$template_name.'.html';
   $html = file_get_contents($path, true);
 
   $html = str_replace("%title%", $title, $html);
   $html = str_replace("%body%", $body, $html);
-  
+  $html = str_replace("%img%", $img, $html);
   return $html;
 }
 
