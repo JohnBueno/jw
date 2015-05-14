@@ -5,9 +5,9 @@
 ?>
 
 <?php if ($modules): ?>
-<div class="row banner navbar navbar-default jump-nav" role="banner">
+<div class="row banner navbar navbar-default jump-nav text-center" role="banner">
     <div class="container">
-        <nav role="navigation">
+        <nav role="navigation" class="center-nav">
             <ul id="menu-main-1" class="nav navbar-nav">
                 <?php foreach ($modules as $module): ?>
                 	<li>

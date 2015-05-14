@@ -10,11 +10,15 @@
 				</div>
 
 			</div>
-			<nav role="navigation">
-	            <?php
-			    	wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav']);
-			    ?>
-        	</nav>
+			
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<nav class="center-nav" role="navigation">
+		            <?php
+				    	wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav']);
+				    ?>
+        		</nav>
+			</div>
+			
 		</div>
 	</div>
 </footer>

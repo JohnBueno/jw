@@ -15,7 +15,7 @@
 	<div class="col-sm-8 col-sm-offset-2 text-center hero">
 		<h1>JEN WOODRUFF</h1>
 		<div class="row">
-			<nav class="collapse navbar-collapse" role="navigation">
+			<nav class="collapse navbar-collapse center-nav" role="navigation">
 				<?php
 				if (has_nav_menu('primary_navigation')) :
 				wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav']);

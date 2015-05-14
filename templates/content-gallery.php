@@ -4,8 +4,8 @@
 ?>
 
 <div class="row banner navbar navbar-default" role="banner">
-    <div class="container">
-        <nav role="navigation">
+    <div class="container text-center">
+        <nav role="navigation" class="center-nav">
             <?php
 		    	wp_nav_menu(['menu' => 'portfolios', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav']);
 		    ?>
