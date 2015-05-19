@@ -118,6 +118,19 @@
     }
 }
 
+.wpcf7 input, .wpcf7 textarea{
+    &:extend(.form-control);
+    margin-bottom: @grid-gutter-width/2;   
+}
+
+.wpcf7 textarea{
+    height: 150px;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-mail-sent-ok{
+    border: none;
+}
+
 body.home {
     background: #000;
 }

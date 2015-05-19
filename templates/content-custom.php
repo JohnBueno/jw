@@ -60,9 +60,10 @@
 
 <div id="faqs" class="container faqs">
 
-<h2 class="text-center">FAQ</h2>
+
 <?php 
-	if($faqs): 
+	if($faqs):
+		echo "<h2 class='text-center'>FAQ</h2>";
 		foreach ($faqs as $faq):
 ?>
 		

@@ -50,14 +50,16 @@ function scrollToAnchor(aid) {
                     e.preventDefault();
                     scrollToAnchor($(this).attr('name'));
                 });
-
-                $('.isotope').isotope({
-                    masonry: {
-                        columnWidth: '.item'
-                    },
-                    itemSelector: '.item',
-                    percentPosition: true
+                $(window).load(function() {
+                    $('.isotope').isotope({
+                        masonry: {
+                            columnWidth: '.item'
+                        },
+                        itemSelector: '.item',
+                        percentPosition: true
+                    });
                 });
+
 
                 imagesLoaded('.isotope', function() {
                     $('.isotope').addClass('loaded');
